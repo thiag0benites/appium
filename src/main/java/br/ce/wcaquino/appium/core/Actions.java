@@ -113,4 +113,17 @@ public class Actions {
 		
 	}
 	
+	public boolean checkboxSwitchIsChecked(By by) {
+		
+		try {
+			
+			return Boolean.parseBoolean(driver.findElement(by).getAttribute("checked"));
+			
+		} catch (Exception e) {
+			Assert.fail("Erro ao checar statu do checkbox ou switch");
+			return false;
+		}
+		
+	}
+	
 }
