@@ -44,7 +44,7 @@ public class Testes extends BaseTest{
 	}
 	
 	@Test
-	public void Cadastrar() {
+	public void Cadastro() {
 		
 		String name = "Thiago Benites";
 		String console = "PS4";
@@ -54,6 +54,28 @@ public class Testes extends BaseTest{
 		form.clickCheckbox();
 		form.clickSwitch();
 		form.save();
+		form.validRegistration(name, console);
+		
+	}
+	
+	@Test
+	public void CadastroDemorado() {
+		
+		String name = "Thiago Demorado";
+		String console = "PS4";
+		
+		form.writeName(name);
+		form.selectConsole(console);
+		form.clickCheckbox();
+		form.clickSwitch();
+		form.saveLong();
+		
+		/*
+		 * WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 10);
+		 * wait.until(ExpectedConditions.presenceOfElementLocated(By.className(className
+		 * )));
+		 */
+		
 		form.validRegistration(name, console);
 		
 	}

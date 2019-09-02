@@ -33,7 +33,10 @@ public class FormPage extends BasePage{
 	
 	public void save() {
 		clickListItem(By.className("android.widget.TextView"), "SALVAR");
-		wait(2);
+	}
+	
+	public void saveLong() {
+		clickListItem(By.className("android.widget.TextView"), "SALVAR DEMORADO");
 	}
 	
 	public void validRegistration(String name, String console) {
