@@ -17,7 +17,7 @@ public class Testes extends BaseTest{
 	
 	@Before
 	public void setUp() {
-		menu.accessForm();
+		menu.accessForm(3);
 	}
 	
 	@Test

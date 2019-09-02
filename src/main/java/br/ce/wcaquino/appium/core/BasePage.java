@@ -126,4 +126,56 @@ public class BasePage {
 		
 	}
 	
+	public boolean pageDisplayed(By by, int timeOutSeconds) {
+		
+		boolean displayed = false;
+		int time = 1;
+		
+		try {
+			
+			while (time <= timeOutSeconds) {
+				
+				wait(1);
+				
+				if (driver.findElement(by).isDisplayed()) {
+					displayed = true;
+					break;
+			    }
+				
+				time++;
+			}
+
+			return displayed;
+			
+		} catch (Exception e) {
+			Assert.fail("Erro pageDisplayed\nException: " + e.getMessage());
+			return false;
+		}
+
+	}
+	
+	public void loadedPage(By by, int attempts) {
+		
+		boolean loaded = false;
+		int attempt = 1;
+		
+		while(attempt <= attempts) {
+			
+			if (!pageDisplayed(by, 3)) {
+				DriverFactory.killDriver();
+				wait(3);	
+			} else {
+				loaded = true;
+				break;
+			}
+			
+			attempt++;
+		}
+		
+		if(loaded == false) {
+			Assert.fail("A tela não foi carregada corretamente");
+		}
+		
+	}
+	
 }
