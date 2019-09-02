@@ -79,7 +79,7 @@ public class FormularioTeste {
 	    	}
 	    }
 	    
-	    driver.findElement(MobileBy.AccessibilityId("console")).click();
+	    driver.findElement(MobileBy.AccessibilityId("console")).click();;
 	    
 	    List<MobileElement> cboConsoles = driver.findElements(By.className("android.widget.CheckedTextView"));
 	    
@@ -99,7 +99,7 @@ public class FormularioTeste {
 	}
 	
 	@Test
-	public void clickSwitchCheckbox() throws MalformedURLException {
+	public void ClickSwitchCheckbox() throws MalformedURLException {
 		
 	    DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 	    desiredCapabilities.setCapability("platformName", "Android");
