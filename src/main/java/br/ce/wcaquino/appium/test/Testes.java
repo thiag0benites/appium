@@ -2,16 +2,15 @@ package br.ce.wcaquino.appium.test;
 
 import java.net.MalformedURLException;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.ce.wcaquino.appium.core.DriverFactory;
+import br.ce.wcaquino.appium.core.BaseTest;
 import br.ce.wcaquino.appium.page.FormPage;
 import br.ce.wcaquino.appium.page.MenuPage;
 
-public class Testes {
+public class Testes extends BaseTest{
 
 	private MenuPage menu = new MenuPage();
 	private FormPage form = new FormPage();
@@ -19,11 +18,6 @@ public class Testes {
 	@Before
 	public void setUp() {
 		menu.accessForm();
-	}
-	
-	@After
-	public void tearDown() {
-		DriverFactory.killDriver();
 	}
 	
 	@Test

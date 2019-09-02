@@ -8,11 +8,11 @@ import org.openqa.selenium.By;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class Actions {
+public class BasePage {
 	
 	private AndroidDriver<MobileElement> driver;
 	
-	public Actions() {
+	public BasePage() {
 		driver = DriverFactory.getDriver();
 	}
 
