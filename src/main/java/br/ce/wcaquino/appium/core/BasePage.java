@@ -113,6 +113,16 @@ public class BasePage {
 		
 	}
 	
+	public void elementExistText(String text) {
+		
+		List<MobileElement> elements = driver.findElements(By.xpath("//*[@text='" + text + "']"));
+		
+		if (elements.size() == 0) {
+			Assert.fail("O elemento " + text + " não existe");
+		}
+		
+	}
+	
 	public boolean checkboxSwitchIsChecked(By by) {
 		
 		try {

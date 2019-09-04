@@ -28,5 +28,9 @@ public class MenuPage extends BasePage{
 		}
 
 	}
+	
+	public void accessSplash() {	
+		clickListItem(By.className("android.widget.TextView"), "Splash");
+	}
 
 }
