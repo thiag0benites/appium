@@ -66,7 +66,7 @@ Depois de iniciar o servidor, configurar o "Desired Capabilities":
 * Pegar as info de Activities
 * Linha 1: appPackage sem a classe no final
 	Ex: com.android.calculator2
-* Linha 2: appPackage
+* Linha 2: appActivity
 	Ex: com.android.calculator2.Calculator
 * Selecionar aba "Automatic Server" e "Start Session" (Caso não funcione verificar se a opção "Allow Unauthorized Certificates" esta marcada em config avançada
 *** Ref: https://stackoverflow.com/questions/48127882/error-could-not-connect-to-server-are-you-sure-its-running-in-appium
